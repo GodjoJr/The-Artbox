@@ -1,5 +1,7 @@
 <?php include("header.php"); ?>
 <?php include("oeuvres.php"); ?>
+<?php require_once 'Database.php';
+?>
 
 <main>
 
