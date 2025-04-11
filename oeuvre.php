@@ -1,25 +1,11 @@
 <?php
 include("header.php");
 
-
-function oeuvreFilter($oeuvres, $id)
-{
-    foreach ($oeuvres as $oeuvre) {
-        if ($oeuvre['id'] == $id) {
-            return $oeuvre;
-        }
-    }
-    return null;
-}
-
 $db = new Database();
-$oeuvres = $db->get('oeuvres');
-
 $id = $_GET['id'] ?? null;
-$oeuvre = oeuvreFilter($oeuvres, $id);
-
+$oeuvres = $db->get('oeuvres', ['title', 'artist', 'description', 'image'], ['id' => $id]);
+$oeuvre = $oeuvres[0] ?? null;
 ?>
-
 
 <?php if ($oeuvre): ?>
 

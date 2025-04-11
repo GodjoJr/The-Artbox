@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,400&display=swap');
 
-html, body {
+html,
+body {
     margin: 0;
 }
 
@@ -31,6 +32,13 @@ header ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    gap: 40px;
+}
+
+header ul li:hover a {
+    text-decoration: underline solid 2px;
+    text-underline-offset: 4px;
 }
 
 main {
@@ -59,7 +67,8 @@ footer {
     width: 100%;
 }
 
-.oeuvre h2, #detail-oeuvre h1 {
+.oeuvre h2,
+h1 {
     text-transform: uppercase;
     margin-top: 0;
     margin-bottom: 0;
@@ -67,7 +76,8 @@ footer {
     font-size: 30px;
 }
 
-.oeuvre .description, #detail-oeuvre .description {
+.oeuvre .description,
+#detail-oeuvre .description {
     font-style: italic;
     margin-top: 0;
     font-size: 12px;
@@ -98,6 +108,57 @@ footer {
     max-width: 470px;
 }
 
+h1.center {
+    text-align: center;
+}
+
+#create-oeuvre-form {
+    max-width: 600px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 14px;
+    padding: 0 15px;
+}
+
+#create-oeuvre-form label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    text-transform: uppercase;
+    gap: 10px;
+}
+
+#create-oeuvre-form input[type="text"],
+#create-oeuvre-form input[type="url"],
+#create-oeuvre-form textarea {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+    resize: vertical;
+}
+
+#create-oeuvre-form input[type="submit"] {
+    align-self: center;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    border: 1px solid #000;
+    border-radius: 4px;
+    background: none;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+#create-oeuvre-form input[type="submit"]:hover {
+    background: #000;
+    color: #fff;
+}
+
+
 @media (max-width: 850px) {
     .oeuvre {
         width: 50%;
@@ -119,11 +180,27 @@ footer {
 }
 
 @media (max-width: 600px) {
+
+    header {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+
     .oeuvre {
         width: 100%;
     }
 
     #logo {
         width: 200px;
+    }
+
+    #create-oeuvre-form {
+        padding: 0 10px;
+    }
+
+    #create-oeuvre-form input[type="submit"] {
+        width: 100%;
+        text-align: center;
     }
 }
