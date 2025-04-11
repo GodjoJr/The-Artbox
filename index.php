@@ -1,7 +1,9 @@
-<?php include("header.php"); ?>
-<?php include("oeuvres.php"); ?>
-<?php require_once 'Database.php';
+<?php 
+include("header.php");
+$db = new Database();
+$oeuvres = $db->get('oeuvres');
 ?>
+
 
 <main>
 

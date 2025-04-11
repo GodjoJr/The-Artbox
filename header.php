@@ -10,12 +10,14 @@
 </head>
 <body>
 
+<?php require_once 'Database.php'; ?>
 
     <header>
         <a href="index.php"><img src="img/logo.png" alt="Logo Artbox" id="logo"></a>
         <nav>
             <ul>
                 <li><a href="index.php">Accueil</a></li>
+                <li><a href="create.php">Ajouter une oeuvre</a></li>
             </ul>
         </nav>
     </header>

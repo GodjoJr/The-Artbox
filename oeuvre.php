@@ -12,13 +12,14 @@ function oeuvreFilter($oeuvres, $id)
     return null;
 }
 
-include("oeuvres.php");
+$db = new Database();
+$oeuvres = $db->get('oeuvres');
 
 $id = $_GET['id'] ?? null;
 $oeuvre = oeuvreFilter($oeuvres, $id);
 
-
 ?>
+
 
 <?php if ($oeuvre): ?>
 
