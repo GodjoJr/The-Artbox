@@ -1,5 +1,6 @@
 <?php
 
+
 class Database extends PDO
 {
     private string $host;
